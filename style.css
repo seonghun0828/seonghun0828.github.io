@@ -1,3 +1,11 @@
 .js-clock{
     text-align: right;
 }
+
+.js-form, .js-greeting {
+    text-align: center;
+}
+
+.form-blind{
+    display : none;
+}
