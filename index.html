@@ -6,13 +6,24 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="js-clock">
-            <h1></h1>
-        </div>
-        <form class="js-form form-blind">
+        <div class="clock-div"></div>
+        <div class="weather-div"></div>
+
+        <form class="js-form blind">
             <input type="text" placeholder="What is your name?" />
         </form>
-        <h2 class="js-greeting"></h2>
+        <h1 class="js-greeting"></h1>
+        <form class="js-todo blind">
+            <input type="text" placeholder="Write a to-do List" />
+        </form>
+        <div class="list-div">
+            <ul class="pending-div"></ul>
+            <h3>------------------------</h3>
+            <ul class="finished-div"></ul>
+        </div>
+        <script src="weather.js"></script>
+        <script src="background.js"></script>
+        <script src="todo.js"></script>
         <script src="greeting.js"></script>
         <script src="clock.js"></script>
     </body>

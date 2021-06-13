@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greeting");
+    greeting = document.querySelector(".js-greeting"),
+    greetingToDo = document.querySelector(".js-todo");
 
 const USER_LS = "username";
 
@@ -12,17 +13,19 @@ function handleInput(event){
     event.preventDefault();
     saveUser(input.value);
     loadUser();
-    form.classList.add("form-blind");
+    form.classList.add("blind");
 }
 
 function addUser(){
-    form.classList.remove("form-blind");
+    form.classList.remove("blind");
     form.addEventListener("submit", handleInput);
 }
 
 function loadUser(){
     const username = localStorage.getItem(USER_LS);
-    greeting.innerText = `Hello, ${username}! What do you do today?`;
+    greeting.innerText = `Hello, ${username}!
+    What do you do today?`;
+    greetingToDo.classList.remove("blind");
 }
 
 function checkName(){
