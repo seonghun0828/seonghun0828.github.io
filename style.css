@@ -36,12 +36,13 @@ input {
 }
 
 input::placeholder{
-    color: white;
+    color: #dcdde1;
 }
 
 ul{
     list-style: none;
     padding-left: 0px;
+    font-size: 20px;
 }
 
 button {
