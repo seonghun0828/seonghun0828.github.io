@@ -18,7 +18,7 @@ body {
     color: #ecf0f1;
 }
 
-.js-form, .js-greeting, .js-todo, .list-div {
+.js-form, .greeting-div, .js-todo, .list-div {
     text-align: center;
 }
 
@@ -58,6 +58,7 @@ button {
         opacity: 1;
     }
 }
+
 .bgImage {
     position: absolute;
     text-align: center;
