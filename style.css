@@ -22,6 +22,11 @@ body {
     text-align: center;
 }
 
+.greeting-span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .blind{
     display : none;
 }

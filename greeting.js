@@ -1,7 +1,7 @@
 const askingName = document.querySelector(".js-form"),
     input = askingName.querySelector("input"),
     greetingDiv = document.querySelector(".greeting-div"),
-    greeting = document.querySelector(".js-greeting"),
+    greetingUser = document.querySelector(".greeting-span"),
     askingToDo = document.querySelector(".js-todo"),
     listDiv = document.querySelector(".list-div");
 
@@ -17,7 +17,7 @@ function checkAskingName(){
         askingName.classList.remove("blind");
     } 
     if(isAskingNameBlind) {
-        greeting.classList.remove("blind");
+        greetingUser.classList.remove("blind");
         askingToDo.classList.remove("blind");
     }
 }
@@ -39,7 +39,7 @@ function deleteName(){
     removeAlert();
     localStorage.setItem(USER_LS,"");
     input.value = "";
-    greeting.classList.add("blind");
+    greetingUser.classList.add("blind");
     askingToDo.classList.add("blind");
     addUser();
 }
@@ -58,18 +58,18 @@ function removeAlert(){
 
 function handleInterval(){
     const children = greetingDiv.childNodes;
-    if(children.length===3){
+    if(children.length===3){ // alert가 있을 때는 length가 4이므로 실행되지 않음.
         alertRename();
         setTimeout(removeAlert, 3000);
     }
-    greeting.addEventListener("dblclick", deleteName);
+    greetingUser.addEventListener("dblclick", deleteName);
 }
 
 function loadUser(){
     const username = localStorage.getItem(USER_LS);
-    greeting.innerText = `Hello ${username}`;
+    greetingUser.innerText = `\nHello ${username}\n\n`;
     checkAskingName();
-    greeting.addEventListener("mouseover", handleInterval);
+    greetingUser.addEventListener("mouseover", handleInterval);
     listDiv.classList.remove("blind");
 }
 
