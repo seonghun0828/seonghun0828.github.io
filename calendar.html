@@ -6,16 +6,27 @@
         <link rel="stylesheet" href="calendar-style.css" />
     </head>
     <body>
-        <div class="calendar-frame">
-            <div class="month">
-
+        <div class="calendar-div">
+            <div class="ctl-box">
+                <button><</button>
+                <span class="calendar-month"></span>
+                <button>></button>
             </div>
-            <div class="day">
-
-            </div>
-            <div class="date">
-
-            </div>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                </thead>
+                <tbody class="calendar-body">
+                </tbody>
+            </table>
         </div>
         <script src="calendar.js"></script>
     </body>
