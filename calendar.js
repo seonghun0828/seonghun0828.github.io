@@ -9,7 +9,6 @@ const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July
     today = new Date();
     let year = today.getFullYear(),
     month = today.getMonth(),
-    // day = today.getDay();
     date = today.getDate();
 
 function cleanCalendar(){
@@ -31,15 +30,12 @@ function nextBtn(){
 function makeCalendar(firstDate){
     month = firstDate.getMonth();
     calMonth.innerText = monthList[month] + " " + year;
-    // const firstDate = new Date(year, month, 1), // 이번 달 1일
     const lastDate = new Date(year, month +1, 0); // 이번 달 마지막 일
     let count = 0;
-    // tr을 만들고 그 안에 td 7개 넣고 행바꿔서 tr만들기. lastdate까지 하면 끝
     const firstTr = document.createElement("tr");
     body.appendChild(firstTr);
     for(var i=0; i<firstDate.getDay(); i++){
         const td = document.createElement("td");
-        td.innerHTML = "*";
         firstTr.appendChild(td);
         count++;
     }
